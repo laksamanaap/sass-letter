@@ -1,0 +1,51 @@
+*,
+*::after,
+*::before {
+    margin: 0;  
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+
+    background-color: rgb(255, 255, 255);
+    /*
+    semua ukuran rem pada layout ditentukan pada font-size yang telah
+    dideklarasikan di awal, seperti pada kode dibawah ini, font-size ditentukan
+    dengan 62.5% yang berarti 10px, maka 1rem akan dideklarasikan dengan nilai 10px
+    pada seluruh layout yang kita buat
+    */
+
+    font-size: 62.5%; // 1rem==10px; 10px / 16px(default 1 rem is) = 62.5%
+    scroll-behavior: smooth;
+
+    
+    @include respond(tab-land){ // width < 900
+        font-size: 56.25%; // 1rem = 9px, 9/16 = 56,25%
+    }
+   
+    @include respond(tab-port){ // width < 600
+        font-size: 50%; 
+    } 
+
+    // @include respond(phone){
+    //     font-size: 30%; 
+    // }
+    
+    @include respond(big-dekstop){
+        font-size: 75%;
+    }
+
+
+}
+
+body {
+    box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(tab-port){ // width < 600
+        padding: 0;
+    } 
+
+}
+

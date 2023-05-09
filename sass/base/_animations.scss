@@ -1,0 +1,59 @@
+/* Fade Left Animation */
+@keyframes moveinleft {
+    /* Animation Start */
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    /* Animation End */
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+/* Fade Right Animation */
+@keyframes moveinright {
+    /* Animation Start */
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    /* Animation End */
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+/* Button Animation */
+@keyframes moveinbottom {
+    /* Animation Start */
+    0% {
+        filter: blur(5px);
+        opacity: 0;
+        transform: translateY(4rem);
+
+    }
+
+
+    /* Animation End */
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
